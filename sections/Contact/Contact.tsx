@@ -11,7 +11,7 @@ function Contact() {
       <div className="container">
         <div className="row">
           <div className="col-lg-12 text-center">
-            <h2 className="section-heading">Contact Me</h2>
+            <h2 className="section-heading  mb-2 black-heading">Contact Me</h2>
             <h5 className="contact-info">
               Email:{" "}
               <a className="lead" href="mailto:weijinlinkoi@gmail.com">
@@ -80,7 +80,7 @@ function Contact() {
                 <div className="clearfix"></div>
                 <div className="col-lg-12 text-center">
                   <div id="success"></div>
-                  <button type="submit" className="btn btn-xl btn-primary">
+                  <button type="submit" className="send-message-button">
                     Send Message
                   </button>
                 </div>

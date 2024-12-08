@@ -5,7 +5,7 @@ type IconsProps = {
 
 function Icons({ name, size }: IconsProps) {
   const svgStyling =
-    "transition duration-300 fill-lightPrimary-900 dark:fill-darkPrimary-900 hover:opacity-70";
+    "transition duration-300 fill-[#84645c] dark:fill-darkPrimary-900 hover:opacity-70";
 
   const icons: { [key: string]: JSX.Element } = {
     github: (

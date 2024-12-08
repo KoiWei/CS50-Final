@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/koi/Desktop/cs50/final/CS50-Final/app/layout\":[\"static/media/b70871bf6670d3dc-s.p.otf\",\"static/media/a1ea4e6efdaa5b11-s.p.ttf\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"

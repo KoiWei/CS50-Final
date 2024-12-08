@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 
 function SkillsBadge() {
   const skills = [
+    "Data Analysis",
+    "Digital Marketing",
+    "Product Management",
     "Java",
     "SQL",
     "Python",
@@ -33,7 +36,7 @@ function SkillsBadge() {
   };
 
   return (
-    <div className="flex overflow-hidden">
+    <div className="flex overflow-hidden"> 
       {shuffledSkills.map((skill, index) => (
         <motion.div
           key={index}
@@ -45,7 +48,7 @@ function SkillsBadge() {
             once: true,
           }}
           custom={index}
-          className="mx-2 my-3 cursor-default overflow-hidden rounded-md bg-[#A0522D] px-4 py-1 text-lg font-semibold text-white shadow-none"
+          className="mx-2 my-3 cursor-default overflow-hidden rounded-md bg-[#84645c] px-4 py-1 text-lg font-semibold text-white shadow-none"
         >
           {skill}
         </motion.div>

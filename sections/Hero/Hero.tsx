@@ -15,7 +15,7 @@ function Hero() {
           Jinlin Wei
         </h1>
         <p className="text-4xl font-bold mt-4">
-          Front-end developer based in the north (Valenciennes, Cambrai, Lille)
+        Brown MSc in Innovation Management and Entrepreneurship 25' | Healthcare | Tech x Marketing | Consulting 
         </p>
       </motion.div>
       <motion.div
@@ -27,7 +27,7 @@ function Hero() {
         {/* Dark Brown Button */}
         <a href="mailto:weijinlinkoi@gmail.com">
           <button
-            className="bg-[#4B2E2E] text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-[#3E2727] transition"
+            className="bg-[#4B2E2E] text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-[#3E2727] transition "
           >
             Get in touch with me
           </button>
@@ -39,9 +39,21 @@ function Hero() {
           rel="noopener noreferrer"
         >
           <button
-            className="bg-[#F5F5DC] text-black px-6 py-3 rounded-lg text-lg font-semibold hover:bg-[#EAE0C8] transition"
+            className="bg-[#F5F5DC] text-black px-6 py-3 rounded-lg text-lg font-semibold hover:bg-[#EAE0C8] transition" 
           >
             Download my Resume
+          </button>
+        </a>
+        {/* Pink Button */}
+        <a
+          href="https://www.linkedin.com/in/jinlin-wei-koi19/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button
+            className="bg-[#dcccbc] text-black px-6 py-3 rounded-lg text-lg font-semibold hover:bg-[#EAE0C8] transition"
+          >
+            Connect with me on LinkedIn
           </button>
         </a>
       </motion.div>

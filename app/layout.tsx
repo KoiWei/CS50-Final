@@ -28,7 +28,7 @@ const openSans = localfont({
 
 export const metadata: Metadata = {
   title: "Jinlin Wei",
-  description: "Développeur Front-End",
+  description: "Bruno",
 };
 
 export default function RootLayout({

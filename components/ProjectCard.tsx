@@ -26,7 +26,7 @@ function ProjectCard({
     return (
       <RevealContent style="flex items-center relative flex-row-reverse xl:min-h-[500px]">
         <>
-          <div className="z-10 flex h-min w-full flex-col gap-6 rounded-[10px] bg-[#EFF6FF] p-11 shadow-lightCard dark:bg-[#08203E] dark:shadow-darkCard md:w-7/12">
+          <div className="z-10 flex h-min w-full flex-col gap-6 rounded-[10px] bg-[#dcccbc] p-11 shadow-lightCard dark:bg-[#08203E] dark:shadow-darkCard md:w-7/12">
             <p className="text-xl font-bold">{name}</p>
             <p className="text-[#4B5563]">{description}</p>
             <div className="flex flex-wrap gap-x-2">
@@ -74,7 +74,7 @@ function ProjectCard({
               className="rounded-[10px] brightness-75"
             />
           </div>
-          <div className="z-10 flex h-min w-full flex-col gap-6 rounded-[10px] bg-[#EFF6FF] p-11 shadow-lightCard dark:bg-[#08203E] dark:shadow-darkCard md:w-7/12">
+          <div className="z-10 flex h-min w-full flex-col gap-6 rounded-[10px] bg-[#dcccbc] p-11 shadow-lightCard dark:bg-[#08203E] dark:shadow-darkCard md:w-7/12">
             <p className="text-xl font-bold">{name}</p>
             <p className="text-[#4B5563]">{description}</p>
             <div className="flex flex-wrap gap-x-2">
