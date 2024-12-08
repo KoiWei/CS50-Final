@@ -36,7 +36,7 @@ function SkillsBadge() {
   };
 
   return (
-    <div className="flex overflow-hidden"> 
+    <div className="flex overflow-hidden"> {/* Added z-50 and relative */}
       {shuffledSkills.map((skill, index) => (
         <motion.div
           key={index}

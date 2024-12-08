@@ -1,133 +1,103 @@
 .timeline {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    padding: 60px 0; /* 增加顶部和底部的间距 */
-    list-style: none;
-}
-
-.timeline:before {
-    content: " ";
+  }
+  
+  .timeline:before {
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     left: 50%;
-    width: 3px;
-    margin-left: -1.5px;
-    background-color: #8C7063;
-}
-
-.timeline > li {
+    width: 4px;
+    background-color: #84645c;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
     position: relative;
-    margin-bottom: 250px;
-}
-
-.timeline > li:last-child {
-    margin-bottom: 0; /* 最后一个条目不需要额外的下间距 */
-}
-
-.timeline > li > .timeline-panel {
-    float: left;
-    position: relative;
-    width: 46%;
-    padding: 20px;
-    border: 1px solid #d4d4d4;
-    border-radius: 2px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-    background-color: #fff;
-    transition: all 0.3s ease-in-out;
-}
-
-.timeline > li > .timeline-panel:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.timeline > li > .timeline-panel:before,
-.timeline > li > .timeline-panel:after {
-    display: none; /* 移除箭头 */
-}
-
-.timeline > li > .timeline-badge {
-    z-index: 100;
-    position: absolute;
-    top: 50%; /* 垂直居中 */
-    transform: translateY(-50%);
-    left: 50%;
-    width: 90px; /* 放大圆形图片的直径 */
-    height: 90px;
-    margin-left: -45px;
-    border-radius: 50%;
-    background-size: cover;
-    background-position: center;
-}
-
-/* 自定义圆形图片 */
-.timeline-badge.primary {
-    background-image: url('../../public/images/IntusCareScreenshot.webp');
-}
-
-.timeline-badge.success {
-    background-image: url('../../public/images/TikTok.webp');
-}
-
-.timeline-badge.warning {
-    background-image: url('../../public/images/hennessy.webp');
-}
-
-.timeline-badge.danger {
-    background-image: url('../../public/images/TikTok.webp');
-}
-
-.timeline-badge.info {
-    background-image: url('../../public/images/TikTok.webp');
-}
-
-.timeline-badge.extra {
-    background-image: url('../../public/images/hennessy.webp');
-}
-
-/* 对齐反向时间轴的面板 */
-.timeline > li.timeline-inverted > .timeline-panel {
-    float: right;
-}
-
-.timeline-title {
-    margin-top: 0;
-    color: inherit;
-}
-
-.timeline-body > p,
-.timeline-body > ul {
+  }
+  
+  .timeline-item:last-child {
     margin-bottom: 0;
+  }
+  
+  .timeline-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ddd;
+    border: 3px solid #84645c;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  
+  .timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .timeline-content {
+    max-width: 400px;
+    background-color: #dcccbc;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+  }
+
+  .timeline-description {
+    font-size: 16px;
+    max-width: 240px; /* 限制内容宽度 */
+    word-wrap: break-word; /* 确保长单词自动换行 */
+    white-space: normal; /* 允许多行显示 */
+  }
+  
+  .timeline-text {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .timeline-content.left {
+    text-align: right;
+    margin-left: auto; /* 自动对齐左侧 */
+    margin-right: calc(50% + 100px); /* 让右侧对齐到偏左60px的垂直线 */
+} 
+  
+  .timeline-content.right {
+    text-align: left;
+    margin-left: calc(50% + 100px);
+  }
+  
+  .timeline-date {
+    font-weight: bold;
+    color: #4b2e2e;
+    margin-bottom: 10px;
+  }
+  
+  .timeline-text {
+    color: #333;
+    line-height: 1.5;
+  }  
+    
+  .timeline-title {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.timeline-body > p + p {
-    margin-top: 5px;
-}
 
-/* 响应式调整 */
-@media (max-width: 767px) {
-    ul.timeline:before {
-        left: 40px;
-    }
-
-    ul.timeline > li > .timeline-panel {
-        width: calc(100% - 90px);
-    }
-
-    ul.timeline > li > .timeline-badge {
-        top: 50%;
-        left: 15px;
-        transform: translateY(-50%);
-        margin-left: 0;
-        width: 90px; /* 确保在小屏幕上也放大圆形图片 */
-        height: 90px;
-    }
-
-    ul.timeline > li > .timeline-panel {
-        float: right;
-    }
-}
-
+/* Retain global styling */
 body {
     background-color: #f3f3e3;
 }

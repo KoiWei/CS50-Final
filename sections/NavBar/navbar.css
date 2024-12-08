@@ -1,34 +1,57 @@
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0; 
-    width: 100%;
-    background-color: #84645c;
-    color: white;
-    padding: 10px 0;
-    z-index: 1000; /* 确保导航栏在其他内容之上 */
+html {
+    scroll-behavior: smooth; /* 添加平滑滚动效果 */
   }
   
-  .navbar ul {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0; /* 确保导航栏从最左侧开始 */
+    width: 100%;
+    background-color: #84645c; /* 设置导航栏背景颜色 */
+    color: white;
+    padding: 10px 0;
+    margin: 0; /* 确保没有外边距 */
+    z-index: 1000; /* 确保导航栏在其他内容之上 */
+    font-family: 'Poppins', sans-serif; /* 设置字体为 Poppins */
+    display: flex;
+    justify-content: space-between; /* 分散两组导航菜单 */
+    align-items: center;
+  }
+  
+  .navbar-left {
+    margin-left: 50px; /* 给 JW. 左侧一定的间距 */
+  }
+  
+  .navbar-right {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-end; 
-    padding-right: 90px; 
+    justify-content: flex-end; /* 将右侧导航菜单向右对齐 */
+    padding-right: 50px;
   }
   
-  .navbar li {
-    margin: 0 15px;
+  .navbar-left li,
+  .navbar-right li {
+    margin: 0 15px; /* 设置每个标签之间的间距 */
   }
   
   .navbar a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    font: 'Poppins';
   }
   
   .navbar a:hover {
     text-decoration: underline;
   }
+  
+  section {
+    scroll-margin-top: 80px; /* 调整到合适的位置，避免被导航栏遮挡 */
+  }
+  
+  .home-tab {
+    font-size: 90px; /* JW. 字体大小 */
+    font-weight: bold;
+  }
+  

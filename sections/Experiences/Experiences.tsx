@@ -1,90 +1,71 @@
 import React from "react";
-import './timeline.css';
+import "./timeline.css";
 
-function Experiences() {
+const timelineData = [
+  {
+    date: "2024.4 - Present",
+    title: "Harvard University",
+    description: "Cross-Registration: CS50-Introduction to Computer Science",
+    image: "/images/har.jpeg",
+  },
+  {
+    date: "2024.9 - Present",
+    title: "Intus Care",
+    description: "Business Data Analytics Intern",
+    image: "/images/Intus.webp",
+  },
+  {
+    date: "2024.4 - 2024.6",
+    title: "LVMH",
+    description: "E-Commerce Operations Intern",
+    image: "/images/LVMH.webp",
+  },
+  {
+    date: "2023.8 - 2024.2",
+    title: "TikTok",
+    description: "Product Management Intern",
+    image: "/images/TikTok.webp",
+  },
+  {
+    date: "2024.6 - 2025.5",
+    title: "Brown University",
+    description: "Master in Innovation Management & Entrepreneurship",
+    image: "/images/brownu.webp",
+  },
+  {
+    date: "2022.6 - 2022.8",
+    title: "Tencent",
+    description: "Product Design Intern",
+    image: "/images/tenc.webp",
+  },
+  {
+    date: "2021.9 - 2023.6",
+    title: "Sun Yat-sen University",
+    description: "Bachelor in Business Administration",
+    image: "/images/sysu.webp",
+  },
+];
+
+const Timeline = () => {
   return (
-    <section className="content-section" id="timeline">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12 text-center">
-            <h2 className="section-heading mb-2 black-heading">My Journey</h2>
+    <div className="timeline-container">
+      <h2 className="timeline-title">My Journey</h2>
+      <div className="timeline">
+        {timelineData.map((item, index) => (
+          <div className="timeline-item" key={index}>
+            <div className="timeline-image">
+              <img src={item.image} alt={item.title} />
+            </div>
+            <div className={`timeline-content ${index % 2 === 0 ? "left" : "right"}`}>
+              <h4 className="timeline-date">{item.date}</h4>
+              <p className="timeline-text">{item.title}</p>
+              <p className="timeline-description">{item.description}</p> 
+            </div>
           </div>
-        </div>
-        <div className="row">
-          <div className="col-lg-12">
-            <ul className="timeline">
-              {/* Experience 1 */}
-              <li className="timeline-inverted">
-                <div className="timeline-badge primary"></div>
-                <div className="timeline-panel">
-                  <div className="timeline-heading">
-                    <h5>2024.9 - Present</h5>
-                    <h4 className="subheading">Intus Care Business Data Analytics Intern</h4>
-                  </div>
-                  <div className="timeline-body"></div>
-                </div>
-              </li>
-              {/* Experience 2 */}
-              <li>
-                <div className="timeline-badge success"></div>
-                <div className="timeline-panel">
-                  <div className="timeline-heading">
-                    <h5>2024.6 - 2025.5</h5>
-                    <h4 className="subheading">Brown University Master</h4>
-                  </div>
-                  <div className="timeline-body"></div>
-                </div>
-              </li>
-              {/* Experience 3 */}
-              <li className="timeline-inverted">
-                <div className="timeline-badge warning"></div>
-                <div className="timeline-panel">
-                  <div className="timeline-heading">
-                    <h5>2024.4 - 2024.6</h5>
-                    <h4 className="subheading">LVMH E-Commerce Operations Intern</h4>
-                  </div>
-                  <div className="timeline-body"></div>
-                </div>
-              </li>
-              {/* Experience 4 */}
-              <li>
-                <div className="timeline-badge danger"></div>
-                <div className="timeline-panel">
-                  <div className="timeline-heading">
-                    <h5>2023.8 - 2024.2</h5>
-                    <h4 className="subheading">TikTok Product Management Intern</h4>
-                  </div>
-                  <div className="timeline-body"></div>
-                </div>
-              </li>
-              {/* Experience 5 */}
-              <li className="timeline-inverted">
-                <div className="timeline-badge info"></div>
-                <div className="timeline-panel">
-                  <div className="timeline-heading">
-                    <h5>2022.6 - 2022.8</h5>
-                    <h4 className="subheading">Tencent Gaming Product Intern</h4>
-                  </div>
-                  <div className="timeline-body"></div>
-                </div>
-              </li>
-              {/* Experience 6 */}
-              <li>
-                <div className="timeline-badge extra"></div>
-                <div className="timeline-panel">
-                  <div className="timeline-heading">
-                    <h5>2021.9 - 2023.6</h5>
-                    <h4 className="subheading">Sun Yat-sen University - Bachelor’s Degree</h4>
-                  </div>
-                  <div className="timeline-body"></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
-}
+};
 
-export default Experiences;
+export default Timeline;

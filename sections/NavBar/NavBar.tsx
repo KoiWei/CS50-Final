@@ -1,28 +1,25 @@
-import Link from "next/link";
+import './navbar.css';
 
 function Navbar() {
   return (
-    <nav className="fixed top-0 w-full bg-white shadow-lg z-50">
-      <ul className="flex justify-around py-4">
+    <nav className="navbar" style={{ paddingTop: '15px' }}>
+      <ul className="navbar-left" >
         <li>
-          <a href="#about" className="text-lg font-semibold hover:text-blue-500">
-            About
-          </a>
+          <a href="#hero" className="home-tab" style={{ fontSize: '30px'}}>JW.</a>
+        </li>
+      </ul>
+      <ul className="navbar-right">
+        <li>
+          <a href="#about">About</a>
         </li>
         <li>
-          <a href="#experiences" className="text-lg font-semibold hover:text-blue-500">
-            Experiences
-          </a>
+          <a href="#experiences">Experiences</a>
         </li>
         <li>
-          <a href="#projects" className="text-lg font-semibold hover:text-blue-500">
-            Projects
-          </a>
+          <a href="#projects">Projects</a>
         </li>
         <li>
-          <a href="#contact" className="text-lg font-semibold hover:text-blue-500">
-            Contact
-          </a>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
     </nav>

@@ -1,0 +1,253 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./sections/Contact/contact.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
+/* General Styles */
+body {
+    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+    color: #fff;
+    background-color: #b5acac;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.text-muted {
+    color: #d1c2c2 !important;
+}
+
+a {
+    color: #f0ad4e;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #ec971f;
+    text-decoration: underline;
+}
+
+/* Section Styles */
+.content-section {
+    padding: 80px 0;
+    background-color: #b5acac;
+    background-image: url('/path/to/background-image.png');
+    /* Optional: Replace with your actual path */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: poppins;
+    font-weight: 700;
+    color: #fff;
+}
+
+.section-subheading {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    color: #140d0d;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 18px;
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #2b2215;
+}
+
+.contact-info a:hover {
+    color: #ec971f;
+}
+
+/* Form Styles */
+form {
+    margin-top: 1px;
+    max-width: 700px;
+    margin-left: 160px;
+    margin-right: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    /* Reduce the gap between input fields */
+}
+
+.form-control {
+    border: 1px solid #dcccbc;
+    border-radius: 5px;
+    background-color: #d7c3b1;
+    color: #fff;
+    padding: 40px;
+    /* Increase the padding to make the fields bigger */
+    font-size: 18px;
+    /* Increase the font size */
+    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: auto;
+    /* Ensure it adjusts with padding */
+}
+
+.form-control:focus {
+    border-color: #5d67cc;
+    box-shadow: none;
+    outline: none;
+}
+
+textarea.form-control {
+    width: 550px;
+    height: 366px;
+    /* Increase the height of the textarea */
+}
+
+::placeholder {
+    color: #050404;
+    font-weight: 400;
+    text-transform: none;
+}
+
+
+/* Button Styles */
+.btn-primary {
+    background-color: #f0ad4e;
+    border-color: #f0ad4e;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 30px 30px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #ec971f;
+    border-color: #ec971f;
+    color: #fff;
+}
+.send-message-button {
+    background-color: #54443c;
+    color: white; /* Optional: to ensure the text is readable */
+    border: none; /* Optional: to remove any default border */
+    padding: 30px 30px; /* Optional: to add some padding */
+    cursor: pointer; /* Optional: to change the cursor on hover */
+    margin-left: 195px; /* Adjust this value to increase the left margin */
+  }
+  
+  .send-message-button:hover {
+    background-color: #3e352f; /* Optional: to change color on hover */
+  }
+
+/* Responsive Grid */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.col-md-6 {
+    flex: 0 0 48%;
+    max-width: 48%;
+}
+
+.col-lg-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/* Success Message */
+#success {
+    color: #5cb85c;
+    margin-top: 15px;
+}
+#contact {
+    background-color: #f3f3e3;
+  }
+  .black-heading {
+    color: black;
+  }
+  .send-message-button {
+    background-color: #54443c;
+    color: white; /* Optional: to ensure the text is readable */
+    border: none; /* Optional: to remove any default border */
+    padding: 12px 30px; /* Optional: to add some padding */
+    cursor: pointer; /* Optional: to change the cursor on hover */
+  }
+  
+  .send-message-button:hover {
+    background-color: #3e352f; /* Optional: to change color on hover */
+  }
+/*!************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./sections/NavBar/navbar.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************/
+html {
+    scroll-behavior: smooth; /* 添加平滑滚动效果 */
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0; /* 确保导航栏从最左侧开始 */
+    width: 100%;
+    background-color: #84645c; /* 设置导航栏背景颜色 */
+    color: white;
+    padding: 10px 0;
+    margin: 0; /* 确保没有外边距 */
+    z-index: 1000; /* 确保导航栏在其他内容之上 */
+    font-family: 'Poppins', sans-serif; /* 设置字体为 Poppins */
+    display: flex;
+    justify-content: space-between; /* 分散两组导航菜单 */
+    align-items: center;
+  }
+  
+  .navbar-left {
+    margin-left: 50px; /* 给 JW. 左侧一定的间距 */
+  }
+  
+  .navbar-right {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* 将右侧导航菜单向右对齐 */
+    padding-right: 50px;
+  }
+  
+  .navbar-left li,
+  .navbar-right li {
+    margin: 0 15px; /* 设置每个标签之间的间距 */
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  
+  section {
+    scroll-margin-top: 80px; /* 调整到合适的位置，避免被导航栏遮挡 */
+  }
+  
+  .home-tab {
+    font-size: 90px; /* JW. 字体大小 */
+    font-weight: bold;
+  }
+  

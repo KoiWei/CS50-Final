@@ -3,7 +3,7 @@
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/css-sections_Contact_contact_css-sections_Experiences_timeline_css.css",
+      "static/css/css-sections_Contact_contact_css-sections_Experiences_timeline_css-sections_NavBar_navbar_css.css",
       "static/chunks/app/page.js"
     ],
     "/layout": [

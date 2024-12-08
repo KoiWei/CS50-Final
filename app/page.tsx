@@ -10,13 +10,13 @@ export default function Home() {
   return (
     <>
       <main>
-        <section className="mb-0 h-[70vh]">
+        <section className="mb-0 h-[70vh]" style={{ marginBottom: "1px" }} id="hero">
           <Hero />
         </section>
         <section>
           <Navbar />
         </section>
-        <section>
+        <section style={{ marginTop: "1px" }}>
           <MarqueeSection />
         </section>
         <section id="about">

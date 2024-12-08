@@ -195,135 +195,105 @@ textarea.form-control {
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./sections/Experiences/timeline.css ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************/
 .timeline {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    padding: 60px 0; /* 增加顶部和底部的间距 */
-    list-style: none;
-}
-
-.timeline:before {
-    content: " ";
+  }
+  
+  .timeline:before {
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     left: 50%;
-    width: 3px;
-    margin-left: -1.5px;
-    background-color: #8C7063;
-}
-
-.timeline > li {
+    width: 4px;
+    background-color: #84645c;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
     position: relative;
-    margin-bottom: 100px; /* 增加间距为60px */
-}
-
-.timeline > li:last-child {
-    margin-bottom: 0; /* 最后一个条目不需要额外的下间距 */
-}
-
-.timeline > li > .timeline-panel {
-    float: left;
-    position: relative;
-    width: 46%;
-    padding: 20px;
-    border: 1px solid #d4d4d4;
-    border-radius: 2px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-    background-color: #fff;
-    transition: all 0.3s ease-in-out;
-}
-
-.timeline > li > .timeline-panel:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.timeline > li > .timeline-panel:before,
-.timeline > li > .timeline-panel:after {
-    display: none; /* 移除箭头 */
-}
-
-.timeline > li > .timeline-badge {
-    z-index: 100;
-    position: absolute;
-    top: 50%; /* 垂直居中 */
-    transform: translateY(-50%);
-    left: 50%;
-    width: 90px; /* 放大圆形图片的直径 */
-    height: 90px;
-    margin-left: -45px;
-    border-radius: 50%;
-    background-size: cover;
-    background-position: center;
-}
-
-/* 自定义圆形图片 */
-.timeline-badge.primary {
-    background-image: url('/images/IntusCareScreenshot.webp');
-}
-
-.timeline-badge.success {
-    background-image: url('/images/TikTok.webp');
-}
-
-.timeline-badge.warning {
-    background-image: url('/images/hennessy.webp');
-}
-
-.timeline-badge.danger {
-    background-image: url('/images/TikTok.webp');
-}
-
-.timeline-badge.info {
-    background-image: url('/images/TikTok.webp');
-}
-
-.timeline-badge.extra {
-    background-image: url('/images/hennessy.webp');
-}
-
-/* 对齐反向时间轴的面板 */
-.timeline > li.timeline-inverted > .timeline-panel {
-    float: right;
-}
-
-.timeline-title {
-    margin-top: 0;
-    color: inherit;
-}
-
-.timeline-body > p,
-.timeline-body > ul {
+  }
+  
+  .timeline-item:last-child {
     margin-bottom: 0;
+  }
+  
+  .timeline-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ddd;
+    border: 3px solid #84645c;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  
+  .timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .timeline-content {
+    max-width: 400px;
+    background-color: #dcccbc;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+  }
+
+  .timeline-description {
+    font-size: 16px;
+    max-width: 240px; /* 限制内容宽度 */
+    word-wrap: break-word; /* 确保长单词自动换行 */
+    white-space: normal; /* 允许多行显示 */
+  }
+  
+  .timeline-text {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .timeline-content.left {
+    text-align: right;
+    margin-left: auto; /* 自动对齐左侧 */
+    margin-right: calc(50% + 100px); /* 让右侧对齐到偏左60px的垂直线 */
+} 
+  
+  .timeline-content.right {
+    text-align: left;
+    margin-left: calc(50% + 100px);
+  }
+  
+  .timeline-date {
+    font-weight: bold;
+    color: #4b2e2e;
+    margin-bottom: 10px;
+  }
+  
+  .timeline-text {
+    color: #333;
+    line-height: 1.5;
+  }  
+    
+  .timeline-title {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.timeline-body > p + p {
-    margin-top: 5px;
-}
 
-/* 响应式调整 */
-@media (max-width: 767px) {
-    ul.timeline:before {
-        left: 40px;
-    }
-
-    ul.timeline > li > .timeline-panel {
-        width: calc(100% - 90px);
-    }
-
-    ul.timeline > li > .timeline-badge {
-        top: 50%;
-        left: 15px;
-        transform: translateY(-50%);
-        margin-left: 0;
-        width: 90px; /* 确保在小屏幕上也放大圆形图片 */
-        height: 90px;
-    }
-
-    ul.timeline > li > .timeline-panel {
-        float: right;
-    }
-}
-
+/* Retain global styling */
 body {
     background-color: #f3f3e3;
 }
@@ -339,37 +309,60 @@ body {
 /*!************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./sections/NavBar/navbar.css ***!
   \************************************************************************************************************************************************************************************************************************************************************************/
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0; 
-    width: 100%;
-    background-color: #84645c;
-    color: white;
-    padding: 10px 0;
-    z-index: 1000; /* 确保导航栏在其他内容之上 */
+html {
+    scroll-behavior: smooth; /* 添加平滑滚动效果 */
   }
   
-  .navbar ul {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0; /* 确保导航栏从最左侧开始 */
+    width: 100%;
+    background-color: #84645c; /* 设置导航栏背景颜色 */
+    color: white;
+    padding: 10px 0;
+    margin: 0; /* 确保没有外边距 */
+    z-index: 1000; /* 确保导航栏在其他内容之上 */
+    font-family: 'Poppins', sans-serif; /* 设置字体为 Poppins */
+    display: flex;
+    justify-content: space-between; /* 分散两组导航菜单 */
+    align-items: center;
+  }
+  
+  .navbar-left {
+    margin-left: 50px; /* 给 JW. 左侧一定的间距 */
+  }
+  
+  .navbar-right {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-end; 
-    padding-right: 90px; 
+    justify-content: flex-end; /* 将右侧导航菜单向右对齐 */
+    padding-right: 50px;
   }
   
-  .navbar li {
-    margin: 0 15px;
+  .navbar-left li,
+  .navbar-right li {
+    margin: 0 15px; /* 设置每个标签之间的间距 */
   }
   
   .navbar a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    font: 'Poppins';
   }
   
   .navbar a:hover {
     text-decoration: underline;
   }
+  
+  section {
+    scroll-margin-top: 80px; /* 调整到合适的位置，避免被导航栏遮挡 */
+  }
+  
+  .home-tab {
+    font-size: 90px; /* JW. 字体大小 */
+    font-weight: bold;
+  }
+  
