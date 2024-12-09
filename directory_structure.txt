@@ -1,0 +1,24 @@
+
+/Users/koi/Desktop/cs50/final/CS50-Final
+├── README.md
+├── TikTok.webp
+├── app
+├── components
+├── directory_structure.txt
+├── hooks
+├── next-env.d.ts
+├── next.config.mjs
+├── node_modules
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public
+├── sections
+├── tailwind.config.ts
+└── tsconfig.json
+
+directory: 6 file: 10
+
+
+
+[2K[1G
